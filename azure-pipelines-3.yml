@@ -1,0 +1,12 @@
+trigger:
+- manual
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: pip install ansible==2.9 --user
+  displayName: 'Install Ansible'
+
+- script: ansible-playbook playbook_ping.yml
+  displayName: 'Run Playbook'
