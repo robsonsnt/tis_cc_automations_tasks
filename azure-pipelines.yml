@@ -1,0 +1,9 @@
+trigger:
+- manual
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: python hello.py
+  displayName: 'Run a script python'
