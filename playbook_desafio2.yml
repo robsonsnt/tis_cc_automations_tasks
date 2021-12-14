@@ -1,0 +1,17 @@
+- hosts: localhost
+  gather_facts: true
+  tasks:
+    - debug:
+        var: ansible_facts["all_ipv4_addresses"]
+    - debug:
+        var: ansible_facts["os_family"]
+    - debug:
+        var: ansible_facts["distribution"]
+    - debug:
+        var: ansible_facts["memory_mb"]
+    
+    - name: Crie um playbook Ansible que crie um arquivo no /tmp com o seguinte conteúdo
+      ansible.builtin.lineinfile:
+        path: /tmp/testfile
+        line: Esse é um arquivo que foi criado pelo Ansible!
+        create: yes
