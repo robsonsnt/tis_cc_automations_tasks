@@ -9,6 +9,7 @@ steps:
      python -m pip install --upgrade pip
      pip install ansible
      ansible-playbook playbook_desafio2.yml
-     ls -l && cat /tmp/teste.txt
+     ls -l /tmp/teste.txt
+     cat /tmp/teste.txt
      deactivate
   displayName: "Desafio 2"
