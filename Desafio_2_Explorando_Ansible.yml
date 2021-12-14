@@ -1,0 +1,12 @@
+trigger:
+- main
+pool:
+  vmImage: ubuntu-latest
+steps:
+- script: |
+     python -m venv xpto
+     source xpto/bin/activate
+     python -m pip install --upgrade pip
+     pip install ansible
+     ansible localhost -m setup
+  displayName: "Install requirements"
