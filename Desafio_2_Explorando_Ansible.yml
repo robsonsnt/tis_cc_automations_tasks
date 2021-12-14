@@ -8,5 +8,5 @@ steps:
      source xpto/bin/activate
      python -m pip install --upgrade pip
      pip install ansible
-     ansible-playbook Desafio_2_Explorando_Ansible.yml
+     ansible-playbook playbook_desafio2.yml
   displayName: "Install requirements"
